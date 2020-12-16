@@ -1,0 +1,51 @@
+body {
+    background-color: deepskyblue;
+}
+a:link {
+    color: blue;
+}
+
+a:visited {
+    color: green;
+}
+#menuBar {
+    font-size: 20px;
+    text-align: center;
+    background: mediumblue;
+    margin-top: 50px;
+}
+#menuBar .menuButton {
+    width: 150px;
+    background: cadetblue;
+    border: 2px solid black;
+    border-radius: 25px;
+    margin: 15px;
+    text-align: center;
+    display: inline-block;
+}
+#menuBar .menuButton:HOVER {
+    background: lightseagreen;
+    border: 2px solid gray;
+    color: white;
+}
+.innerTable {
+    border: 1px double;
+    width: auto;
+}
+table {
+    width: 40%;
+    margin-left: 30%;
+    margin-right: 30%;
+    border: 5px darkgreen solid;
+    border-collapse: collapse;
+}
+
+td {
+    border: 1px darkgreen solid;
+    height: 20px;
+    width: 50%;
+}
+
+.centeredTd {
+    text-align: center;
+}
