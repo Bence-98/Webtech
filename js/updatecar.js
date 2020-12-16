@@ -19,24 +19,24 @@ $(document).ready(function (){
 $(function (){
     $('form').on('submit', function (submit) {
         submit.preventDefault();
-        var carArr=$('form').serializeArray();
+        var carArray=$('form').serializeArray();
         var car = {
-            _id:carArr[0].value,
-            name: carArr[1].value,
-            consumption: carArr[2].value,
-            color: carArr[3].value,
-            manufacturer: carArr[4].value,
-            avaiable: carArr[5].value,
-            year: carArr[6].value,
-            horsepower: carArr[7].value
-        };
-        var d = carArr[0].value;
+            _id:carArray[0].value,
+            name: carArray[1].value,
+            consumption: carArray[2].value,
+            color: carArray[3].value,
+            manufacturer: carArray[4].value,
+            avaiable: carArray[5].value,
+            year: carArray[6].value,
+            horsepower: carArray[7].value
+        }
+        var d = carArray[0].value;
         console.log(d);
         $.ajax({
             url: 'https://webtechcars.herokuapp.com/api/cars/' + d,
             type: 'DELETE',
 
-        });
+        })
         $.ajax({
             type:'post',
             url: 'https://webtechcars.herokuapp.com/api/cars',
@@ -44,11 +44,11 @@ $(function (){
             dataType: "json",
             contentType: "application/json",
             success: function () {
-                window.alert("Sikeres frissítés")
+                window.alert("Sikeres frissítés");
             },
             error: function () {
                 window.alert("Hiba");
             }
         })
     })
-});
+})

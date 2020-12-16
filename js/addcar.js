@@ -12,16 +12,16 @@ $(document).ready(function (){
 $(function (){
     $('form').on('submit', function (submit) {
         submit.preventDefault();
-        var carArr=$('form').serializeArray();
+        var carArray=$('form').serializeArray();
         var car = {
             _id:null,
-            name: carArr[0].value,
-            consumption: carArr[1].value,
-            color: carArr[2].value,
-            manufacturer: carArr[3].value,
-            avaiable: carArr[4].value,
-            year: carArr[5].value,
-            horsepower: carArr[6].value
+            name: carArray[0].value,
+            consumption: carArray[1].value,
+            color: carArray[2].value,
+            manufacturer: carArray[3].value,
+            avaiable: carArray[4].value,
+            year: carArray[5].value,
+            horsepower: carArray[6].value
         }
         $.ajax({
             type:'post',
@@ -30,7 +30,7 @@ $(function (){
             dataType: "json",
             contentType: "application/json",
             success: function () {
-                window.alert("Sikeres küldés")
+                window.alert("Sikeres küldés");
             },
             error: function () {
                 window.alert("Hiba");

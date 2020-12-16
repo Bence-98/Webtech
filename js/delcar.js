@@ -12,9 +12,9 @@ $(document).ready(function (){
 $(function (){
     $('form').on('submit', function (submit) {
         submit.preventDefault();
-        var dArr=$('form').serializeArray();
-        var d = dArr[0].value;
-        console.log(d);
+        var delArr=$('form').serializeArray();
+        var del = delArr[0].value;
+        console.log(del);
         $.ajax({
             url: 'https://webtechcars.herokuapp.com/api/cars/' + d,
             type: 'DELETE',

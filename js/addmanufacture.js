@@ -1,12 +1,12 @@
 $(function (){
     $('form').on('submit', function (submit) {
         submit.preventDefault();
-        var manufArr=$('form').serializeArray();
+        var manufArray=$('form').serializeArray();
         var manufacture = {
             _id:null,
-            name: manufArr[0].value,
-            country: manufArr[1].value,
-            founded: manufArr[2].value,
+            name: manufArray[0].value,
+            country: manufArray[1].value,
+            founded: manufArray[2].value,
         }
         $.ajax({
             type:'post',
@@ -15,7 +15,7 @@ $(function (){
             dataType: "json",
             contentType: "application/json",
             success: function () {
-                window.alert("Sikeres küldés")
+                window.alert("Sikeres küldés");
             },
             error: function () {
                 window.alert("Hiba");
